@@ -36,7 +36,7 @@ function App() {
     }
     const baseFour = () => {
         clearAll()
-        setInputBool(1)
+        setInputBool(true)
     }
 
     const totalPlus = () => {
@@ -57,7 +57,7 @@ function App() {
         setSecondWin(0)
         setTotalChange('')
         setBaseText('')
-        setInputBool(true)
+        setInputBool(false)
         setInputText('')
     }
     const clearAll = () => {
@@ -66,7 +66,7 @@ function App() {
         setTotalChange('')
         setTotal(21)
         setBaseText('')
-        setInputBool(true)
+        setInputBool(false)
         setInputText('')
     }
 
