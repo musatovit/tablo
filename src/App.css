@@ -55,6 +55,11 @@ body, html, #root {
   font-size: 30em;
 }
 
+.text {
+  color: red;
+  font-size: 10em;
+}
+
 .third {
   display: flex;
   background-color: lightgray;
