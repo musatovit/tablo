@@ -95,7 +95,7 @@ function App() {
             {baseText && <div className='second text'>{baseText}</div>}
             {inputText && <div className='second text' style={{ fontSize: `${sizeText}em` }}>{inputText}</div>}
                 {(!baseText && !totalChange && !inputText) && <div className='second hidden'>{total}</div>}
-            <div className='third'>
+            <div className={isActive ? 'third black' : 'third'}>
                 <div className='flexColumn'>
                     <div>Победа</div>
                     <div>

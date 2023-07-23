@@ -12,9 +12,6 @@ body, html, #root {
   text-align: center;
 }
 
-.black {
-  background-color: black;
-}
 
 .win {
   display: flex;
@@ -68,6 +65,10 @@ body, html, #root {
   display: flex;
   background-color: lightgray;
   justify-content: space-around;
+}
+
+.black {
+  background-color: black;
 }
 
 .flexColumn {
