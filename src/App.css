@@ -12,6 +12,10 @@ body, html, #root {
   text-align: center;
 }
 
+.black {
+  background-color: black;
+}
+
 .win {
   display: flex;
 }

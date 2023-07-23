@@ -10,46 +10,56 @@ function App() {
     const [inputText, setInputText] = useState('')
     const [inputBool, setInputBool] = useState(false)
     const [sizeText, setSizeText] = useState(10)
+    const [isActive, setIsActive] = useState(true)
 
 
     const firstWinFunc = () => {
         setFirstWin(1)
         setSecondWin(0)
+        setIsActive(false)
     }
 
     const secondWinFunc = () => {
         setSecondWin(1)
         setFirstWin(0)
+        setIsActive(false)
     }
 
     const baseOne = () => {
         clearAll()
         setBaseText('Сами!')
+        setIsActive(false)
     }
     const baseTwo = () => {
         clearAll()
         setBaseText('Тайм аут!')
+        setIsActive(false)
     }
     const baseThree = () => {
         clearAll()
         setBaseText('Заканчиваем!')
+        setIsActive(false)
     }
     const baseFour = () => {
         clearAll()
         setInputBool(true)
+        setIsActive(false)
     }
 
     const totalPlus = () => {
         clearNotAll()
         setTotalChange('+')
+        setIsActive(false)
     }
     const totalMinus = () => {
         clearNotAll()
         setTotalChange('-')
+        setIsActive(false)
     }
     const totalEqual = () => {
         clearNotAll()
         setTotalChange('=')
+        setIsActive(false)
     }
 
     const clearNotAll = () => {
@@ -59,6 +69,7 @@ function App() {
         setBaseText('')
         setInputBool(false)
         setInputText('')
+        setIsActive(true)
     }
     const clearAll = () => {
         setFirstWin(0)
@@ -68,10 +79,11 @@ function App() {
         setBaseText('')
         setInputBool(false)
         setInputText('')
+        setIsActive(true)
     }
 
     return (
-        <div className='container'>
+        <div className={isActive ? 'container black' : 'container'}>
             {(firstWin || secondWin) ? <div className='win first'>
                 <div className={firstWin ? 'green' : 'red'}></div>
                 <div className={secondWin ? 'green' : 'red'}></div>
