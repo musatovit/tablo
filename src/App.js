@@ -30,6 +30,11 @@ function App() {
         setBaseText('Сами!')
         setIsActive(false)
     }
+    const baseOneHalf = () => {
+        clearAll()
+        setBaseText('Не держим!')
+        setIsActive(false)
+    }
     const baseTwo = () => {
         clearAll()
         setBaseText('Тайм аут!')
@@ -88,13 +93,12 @@ function App() {
                 <div className={firstWin ? 'green' : 'red'}></div>
                 <div className={secondWin ? 'green' : 'red'}></div>
             </div> : <div className='first'></div>}
-            {totalChange && <div
-                className={totalChange === '+' && 'plus second' || totalChange === '-' && 'minus second' || 'second'}>
+            {totalChange && <div className={totalChange === '+' && 'plus second' || totalChange === '-' && 'minus second' || 'second'}>
                 {total} {totalChange}
             </div>}
             {baseText && <div className='second text'>{baseText}</div>}
             {inputText && <div className='second text' style={{ fontSize: `${sizeText}em` }}>{inputText}</div>}
-                {(!baseText && !totalChange && !inputText) && <div className='second hidden'>{total}</div>}
+            {(!baseText && !totalChange && !inputText) && <div className='second hidden'>{total}</div>}
             <div className={isActive ? 'third black' : 'third'}>
                 <div className='flexColumn'>
                     <div>Победа</div>
@@ -135,6 +139,7 @@ function App() {
                         :
                         <div>
                             <button onClick={baseOne}>Сами</button>
+                            <button onClick={baseOneHalf}>Не держим</button>
                             <button onClick={baseTwo}>Тайм аут</button>
                             <button onClick={baseThree}>Заканчиваем!</button>
                             <button onClick={baseFour}>Свой</button>
