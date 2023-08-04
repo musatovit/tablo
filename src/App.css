@@ -2,8 +2,6 @@ body, html, #root {
   height: 100%;
   margin: 0;}
 
-
-
 .container {
   height: 100%;
   margin: 0;
@@ -11,7 +9,6 @@ body, html, #root {
   grid-template-rows: 25% 65% 10%;
   text-align: center;
 }
-
 
 .win {
   display: flex;

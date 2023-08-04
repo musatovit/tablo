@@ -35,16 +35,19 @@ function App() {
         setBaseText('Не держим!')
         setIsActive(false)
     }
+
     const baseTwo = () => {
         clearAll()
         setBaseText('Тайм аут!')
         setIsActive(false)
     }
+
     const baseThree = () => {
         clearAll()
         setBaseText('Заканчиваем!')
         setIsActive(false)
     }
+
     const baseFour = () => {
         clearAll()
         setInputBool(true)
@@ -56,11 +59,13 @@ function App() {
         setTotalChange('+')
         setIsActive(false)
     }
+
     const totalMinus = () => {
         clearNotAll()
         setTotalChange('-')
         setIsActive(false)
     }
+
     const totalEqual = () => {
         clearNotAll()
         setTotalChange('=')
@@ -76,6 +81,7 @@ function App() {
         setInputText('')
         setIsActive(true)
     }
+
     const clearAll = () => {
         setFirstWin(0)
         setSecondWin(0)
